@@ -3,6 +3,8 @@ const express = require('express');
 var app = express();
 const hbs = require('hbs');
 
+const port = process.env.PORT || 3000;
+
 /*
 Argument 1: The first argument is going to be a URL in app.get
 
@@ -105,6 +107,6 @@ app.use((req, res, next) => {
 });
 
 // This line will make the current application to listen in the port number 3000
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log('Example app listening on port 3000!')
 });
